@@ -1,0 +1,28 @@
+body{
+    background-image: url("home.jpg");
+    background-repeat: no-repeat;
+}
+
+.header {  
+    display: flex;
+    justify-content: space-between;
+    padding-left: 100px;
+}
+
+
+
+.header a{
+    display: flex;
+     background-color:dodgerblue;
+    text-decoration: none;
+    border-radius: 30px;
+    width: 100px;
+    padding: 20px;
+}
+.header a:hover{
+    background-color: skyblue;
+}
+
+.container {
+    margin-right: 550px;
+}

@@ -1,0 +1,24 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 100px;
+}
+
+
+
+.header a{
+    display: flex;
+     background-color:dodgerblue;
+    text-decoration: none;
+    border-radius: 30px;
+    width: 100px;
+    padding: 20px;
+}
+.header a:hover{
+    background-color: skyblue;
+}
+
+.editor{
+    margin-top: 100px;
+    margin-left: 500px;
+}

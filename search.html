@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="stylesheet" href="search.css">
+    <script src=
+    "https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js">
+        </script>
+</head>
+
+<body ng-app="">
+    <div class="header">
+        <h2>Welcome to search page</h2>
+        <a href="add.html">Add a book</a>
+        <a href="review.html">Review a book</a>
+        <a href="search.html">Search a book</a>
+        <a href="about.html">About Us</a>
+    </div>
+
+    Search By:
+    <select ng-model="myVar3">
+      <option value="author"> Author 
+      <option value="genre">Genre 
+    </select>
+    
+  
+    <div ng-switch="myVar3">
+      <div ng-switch-when="author">
+        <label for="book">Author:</label>
+        <form action="/author" method="post"><input type="text" name="authorname" id="authorname" placeholder="Search by author"><input type="submit" value="search" class="submit"></form>
+      </div>
+      <div ng-switch-when="genre">
+        <label for="theme">Genre:</label>
+        <form action="/theme" method="post"><input type="text" name="theme" id="theme" placeholder="Search by Genre"><input type="submit" value="search" class="submit"></form>
+      </div>
+    </div>
+
+
+
+    <div class="scifi" >
+      Hide Scifi <input type="checkbox" ng-model="myVar">
+<div ng-hide="myVar">
+  <a href="sci.html"><h1>Sci-Fi Books</h1></a> 
+  <img src="images.jpeg" alt="Sci-Fi" width="300" height="450">
+</div>
+    </div>
+
+    <div class="comic">
+      Hide Comic <input type="checkbox" ng-model="myVar1">
+      <div ng-hide="myVar1">
+        <a href="comic.html"><h1>Comic Books</h1></a> 
+      <img src="comic.webp" alt="Comics" width="300" height="450">
+      </div>
+        
+    </div>
+
+    <div class="novel">
+      Hide Novel <input type="checkbox" ng-model="myVar2">
+        <div ng-hide="myVar2">
+          <a href="novel.html"><h1>Novel Books</h1></a> 
+      <img src="novel.jpeg" alt="Novel Books" width="300" height="450">
+        </div>
+    </div>
+</body>
+</html>

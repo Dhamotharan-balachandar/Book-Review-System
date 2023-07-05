@@ -1,0 +1,66 @@
+
+body{
+    background-image: url('home.jpg');
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 100px;
+}
+
+
+
+.header a{
+    display: flex;
+     background-color:dodgerblue;
+    text-decoration: none;
+    border-radius: 30px;
+    width: 100px;
+    padding: 20px;
+}
+.header a:hover{
+    background-color: skyblue;
+}
+.h{
+
+    margin-top: 30px;
+    display: flex;
+    padding-left: 100px;
+    border: none;
+    outline: none;
+}
+
+.h input{
+    border-radius: 15px;
+}
+
+.scifi{
+    margin-left: 50px;
+}
+
+.scifi a {
+ text-decoration: none;
+}
+
+.comic{
+    position: absolute;
+    left: 450px;
+    top: 125px;
+
+}
+
+.comic a{
+    text-decoration: none;
+}
+
+.novel{
+    position: absolute;
+    left: 850px;
+    top: 125px;
+
+}
+
+.novel a{
+    text-decoration: none;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review a book</title>
+    <link rel="stylesheet" href="review.css">
+</head>
+<body>
+
+    <div class="header">
+        <h2>Welcome to search page</h2>
+        <a href="add.html">Add a book</a>
+        <a href="review.html">Review a book</a>
+        <a href="search.html">Search a book</a>
+        <a href="about.html">About Us</a>
+    </div>
+
+    <div class="h">
+        <h1>Add A Review </h1>
+    </div>
+
+    <form name="myForm" method="post" action="/addreview">
+    <div class="container">
+        <h4>Enter the details</h4>
+        <input type="text" name="name" id="name" placeholder="Book Name">
+        <input type="text" name="authorname" id="authorname" placeholder="Author name">
+        <input type="text" name="theme" id="theme" placeholder="Theme of the Book">
+        <textarea name="review" id="review" cols="30" rows="10" placeholder="Type Review"></textarea>
+        <input type="submit" name="submit" value="Submit review" onclick="validateForm()">
+    </div>
+    </form>
+<script>
+  function validateForm() {
+  let x = document.forms["myForm"]["name"].value;
+  if (x == "") {
+    window.alert(" Book Name must be filled out");
+    return false;
+  }
+
+  let y = document.forms["myForm"]["username"].value;
+  if (y == "") {
+    window.alert(" Author Name must be filled out");
+    return false;
+  }
+
+  let z = document.forms["myForm"]["theme"].value;
+  if (z == "") {
+    window.alert("Theme must be filled out");
+    return false;
+  }
+
+  let a = document.forms["myForm"]["review"].value;
+  if (a == "") {
+    window.alert("Review must be filled out");
+    return false;
+  }
+
+}
+</script>
+
+</body>
+</html>

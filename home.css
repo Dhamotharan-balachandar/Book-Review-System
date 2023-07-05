@@ -1,0 +1,52 @@
+body{
+    background-image: url("home.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 99px;
+}
+
+
+
+.header a{
+    display: flex;
+     background-color: aliceblue;
+    text-decoration: none;
+    border-radius: 30px;
+    width: 100px;
+    padding: 20px;
+}
+.header a:hover{
+    background-color: skyblue;
+}
+.top{
+    display: flex;
+    padding: 10px 10px 10px 10px;
+    justify-content: center;
+    align-items: center;
+    color:black;
+}
+
+.main{
+    margin-left: 50px;
+    margin-right: 750px;
+    border-radius: 30px;
+    padding: 10px;
+    background-color: aqua;
+}
+
+.t{
+    font-family: cursive;
+    position: absolute;
+    bottom: 10px;
+    left: 30px;
+}
+
+.vid{
+    position: absolute;
+    left: 20px;
+    top: 750px;
+}

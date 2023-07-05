@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html ng-app="textEditorApp">
+  <head>
+    <meta charset="UTF-8">
+    <title>Text Editor</title>
+    <link rel="stylesheet" href="text_editor.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  </head>
+  <body>
+    <div class="header">
+        <h2>Welcome to Text Editor page</h2>
+        <a href="add.html">Add a book</a>
+        <a href="review.html">Review a book</a>
+        <a href="search.html">Search a book</a>
+        <a href="about.html">About Us</a>
+    </div>
+    <div ng-controller="TextEditorController" class="editor">
+        <h2> Text Editor</h2>
+      <textarea name="word" id="word" cols="60" rows="30" ng-model="filetext"></textarea><br>
+      <input type="file" ng-model="fileInput" ng-change="uploadFile(fileInput)"><br>
+      <button ng-click="downloadFile()">Download</button><br>
+      <button ng-click="copyToClipboard()">Copy</button><br>
+      <button ng-click="saveToFile()">Save</button>
+    </div>
+    
+   <script>
+    var app=angular.module('textEditorApp', []);
+    app.controller('TextEditorController',['$scope',function($scope){
+    $scope.filetext='';
+
+    //upload
+    $scope.uploadFile = function(files) {
+  var file = files[0];
+  var reader = new FileReader();
+  reader.onload = function(event) {
+    $scope.$apply(function() {
+      $scope.filetext = event.target.result;
+    });
+  };
+  reader.readAsText(file);
+   };
+
+   //download
+   $scope.downloadFile = function() {
+  var blob = new Blob([$scope.filetext], {type: 'text/plain'});
+  var url = window.URL.createObjectURL(blob);
+  var a = document.createElement('a');
+  a.href = url;
+  a.download = 'file.txt';
+  a.click();
+  window.URL.revokeObjectURL(url);
+};
+
+    //copy
+    $scope.copyToClipboard = function() {
+  navigator.clipboard.writeText($scope.filetext);
+};
+
+    //save
+    $scope.saveToFile = function() {
+  localStorage.setItem('file', $scope.filetext);
+};
+
+$scope.loadFromFile = function() {
+  var fileText = localStorage.getItem('file');
+  if (fileText) {
+    $scope.fileText = fileText;
+  }
+};
+$scope.loadFromFile();
+
+
+
+
+    }]);
+   </script>
+  </body>
+</html>

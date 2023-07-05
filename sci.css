@@ -1,0 +1,49 @@
+body{
+    background-color: skyblue;
+    background-image: url('home.jpg');
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 100px;
+}
+
+
+
+.header a{
+    display: flex;
+     background-color:dodgerblue;
+    text-decoration: none;
+    border-radius: 30px;
+    width: 100px;
+    padding: 20px;
+}
+.header a:hover{
+    background-color: skyblue;
+}
+
+.h{
+    display: flex;
+    margin-top: 10px;
+    margin-left: 500px;
+}
+
+.left{
+    margin-left: 30px;
+        position: absolute;
+        top: 100px;
+}
+.names{
+    position: absolute;
+    margin-left: 550px;
+    top: 150px;
+}
+
+.right{
+    position: absolute;
+    margin-left: 950px;
+    top: 85px;
+}
+
+

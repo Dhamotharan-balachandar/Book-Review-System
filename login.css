@@ -1,0 +1,97 @@
+*{
+    font-family: 'poppins' , sans-serif;
+}
+
+body{
+    background-image: url("login.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+
+.container{
+display: flex;
+flex-direction: column;
+width: 350px;
+padding: 0 15px 0 15px;
+}
+
+span{
+    display: flex;
+    justify-content: center;
+    color: aliceblue;
+    font-size: medium;
+    padding: 10px 0 10px 0;
+}
+header{
+    display: flex;
+    justify-content: center;
+    color: aliceblue;
+    padding: 10px 0 10px 0;
+}
+.input_field1{
+ padding: 10px;
+ font-size: large;
+}
+.input_field2{
+    padding: 10px;
+    font-size: large;
+   }
+   .input_field3{
+    padding: 10px;
+   }
+
+.input{
+    height: 75px;
+    width: 87%;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    color: #ffff;
+    padding: 0 0 0 45px;
+    background: rgba(255, 255,255,0.1);
+}
+
+::-webkit-input-placeholder{
+    color: #ffff;
+}
+
+.submit{
+    border: none;
+    border-radius: 30px;
+    font-size: 15px;
+    height: 45px;
+    outline: none;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    transition: .3s;
+}
+.submit:hover{
+    box-shadow: 1px 5px 7 1px rgba(0, 0, 0, 0.2);
+}
+
+.bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: small;
+    color: #ffff;
+    margin-top: 10px;
+}
+
+.left{
+    display: flex;
+}
+label a{
+    color: #ffff;
+    text-decoration: none;
+}
